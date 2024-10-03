@@ -1,0 +1,169 @@
+/* 上传容器样式 */
+#upload-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* 上传按钮样式 */
+#upload-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: opacity 0.3s;
+}
+
+#upload-button:hover {
+    opacity: 0.8;
+}
+
+/* 拖放区域样式 */
+#drag-drop-area {
+    border: 2px dashed #ccc;
+    padding: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#drag-drop-area.dragover {
+    background-color: #f1f1f1;
+}
+
+/* 缩略图预览样式 */
+#thumbnail-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#thumbnail-preview img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+/* 处理按钮样式 */
+#process-button {
+    padding: 15px 30px;
+    background-color: #34a853;
+    color: #fff;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    margin-top: 20px;
+}
+
+#process-button.enabled {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#process-button:hover:enabled {
+    opacity: 0.9;
+}
+/* 进度条样式 */
+#progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 30px;
+    width: 0%;
+    background-color: #34a853;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    transition: width 0.4s ease;
+}
+/* 通知横幅样式 */
+#notification-banner {
+    position: fixed;
+    top: -100px; /* 初始隐藏 */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000;
+    transition: top 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notification-banner.success {
+    background-color: #34a853;
+}
+
+#notification-banner.failure {
+    background-color: #ea4335;
+}
+
+#notification-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+#notification-close {
+    position: absolute;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* 悬停效果 */
+#upload-button:hover, #process-button:hover:enabled {
+    opacity: 0.9;
+}
+
+#drag-drop-area.dragover {
+    border-color: #1a73e8;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    #upload-button, #process-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #drag-drop-area {
+        padding: 30px;
+    }
+
+    #thumbnail-preview img {
+        width: 80px;
+    }
+}
+/* 旋转器图标样式 */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

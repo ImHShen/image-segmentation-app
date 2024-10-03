@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像分割应用程序</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 我们的内容将放在这里 -->
+     <!-- 上传容器 -->
+     <div id="upload-container">
+        <!-- 隐藏的文件输入 -->
+        <input type="file" id="file-input" accept="image/*" multiple style="display:none;">
+        <!-- 上传按钮 -->
+        <label for="file-input" id="upload-button" class="button" aria-label="上传图像">上传图像</label>
+        <!-- 拖放区域 -->
+        <div id="drag-drop-area">
+            <p>拖拽图像到此处</p>
+        </div>
+        <!-- 缩略图预览 -->
+        <div id="thumbnail-preview"></div>
+        <!-- 处理按钮 -->
+        <button id="process-button" class="button" disabled>处理图像</button>
+        <!-- 进度条容器 -->
+        <div id="progress-bar-container" style="display:none;">
+            <div id="progress-bar">
+                <div id="progress-fill">0%</div>
+            </div>
+        </div>
+    </div>    
+    <!-- 通知横幅 -->
+    <div id="notification-banner" style="display:none;">
+        <span id="notification-icon"></span>
+        <span id="notification-message"></span>
+        <button id="notification-close" aria-label="关闭通知">×</button>
+    </div>
+    
+        
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
